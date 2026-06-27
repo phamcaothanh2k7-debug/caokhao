@@ -21,157 +21,7 @@
         * {
             font-family:Roboto;
         }
-        /* === COMPLETE FIXES TO MATCH ORIGINAL DESIGN === */
 
-        /* Force navbar to ALWAYS be horizontal, override ALL Bootstrap 3 media queries */
-        .navbar-collapse.collapse {
-            display: block !important;
-            height: auto !important;
-            padding-bottom: 0 !important;
-            overflow: visible !important;
-            border-top: none !important;
-            box-shadow: none !important;
-            width: auto !important;
-        }
-        .navbar-toggle {
-            display: none !important;
-        }
-        .navbar-header {
-            float: left !important;
-        }
-        .nav.navbar-nav {
-            float: right !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            list-style: none !important;
-        }
-        .nav.navbar-nav > li {
-            float: left !important;
-            list-style: none !important;
-        }
-        .nav.navbar-nav > li > a {
-            padding: 15px 15px !important;
-            line-height: 20px !important;
-            display: block !important;
-            text-decoration: none !important;
-        }
-        .nav.navbar-nav > li > a:hover {
-            background-color: rgba(255,255,255,0.1) !important;
-        }
-
-        /* Navbar background - match original dark blue */
-        .navbar.navbar-inverse.navbar-fixed-top {
-            min-height: 50px !important;
-            margin-bottom: 0 !important;
-            background-color: #428bca !important;
-            border: none !important;
-        }
-
-        /* Fix body padding for fixed navbar */
-        body {
-            padding-top: 50px !important;
-        }
-
-        /* Buttons row - match original (small text links, not bordered buttons) */
-        .cmd-testspeaker,
-        .cmd-testmicrophone,
-        .cmd-testcamera {
-            background: transparent !important;
-            border: 1px solid #ccc !important;
-            color: #333 !important;
-            font-size: 12px !important;
-            padding: 3px 8px !important;
-            margin-left: 3px !important;
-        }
-
-        /* Panel info styling - match original bordered panels */
-        .panel.panel-info {
-            border: 1px solid #bce8f1 !important;
-            border-radius: 4px !important;
-            margin-bottom: 20px !important;
-        }
-        .panel.panel-info > .panel-heading {
-            background-color: #d9edf7 !important;
-            border-color: #bce8f1 !important;
-            color: #31708f !important;
-            padding: 10px 15px !important;
-        }
-        .panel.panel-info > .panel-body {
-            padding: 15px !important;
-        }
-
-        /* Layout: stdinfo and testlist side by side */
-        #stdinfo {
-            width: 280px !important;
-        }
-        #testlist {
-            width: calc(100% - 320px) !important;
-            max-width: 500px !important;
-        }
-
-        /* Avatar styling */
-        .std-photo-yesno {
-            width: 160px !important;
-            height: 120px !important;
-            object-fit: cover !important;
-        }
-
-        /* Container max width */
-        .container {
-            width: auto !important;
-            max-width: 100% !important;
-            padding: 0 20px !important;
-        }
-
-        /* Navbar brand logo */
-        .navbar-brand {
-            padding: 5px 15px !important;
-            height: 50px !important;
-        }
-        .navbar-brand img {
-            height: 45px !important;
-            width: auto !important;
-        }
-
-        /* Ultra-specific overrides for Bootstrap 3 navbar-inverse */
-        .navbar-inverse .navbar-collapse,
-        .navbar-inverse .navbar-form {
-            border-color: transparent !important;
-        }
-        .navbar-inverse .navbar-nav > li > a {
-            color: #ffffff !important;
-        }
-        .navbar-inverse .navbar-nav > li > a.nav-home {
-            color: #ffd800 !important;
-        }
-        .navbar-inverse .navbar-collapse {
-            background: transparent !important;
-        }
-        /* Remove ALL bullet points and list styling from navbar */
-        .navbar ul,
-        .navbar ol,
-        .navbar li,
-        .navbar-nav,
-        .navbar-nav > li,
-        .nav > li,
-        ul.nav,
-        ul.navbar-nav {
-            list-style: none !important;
-            list-style-type: none !important;
-            margin-left: 0 !important;
-            padding-left: 0 !important;
-        }
-        /* Ensure container-fluid takes full width */
-        .navbar .container-fluid {
-            padding-right: 15px !important;
-            padding-left: 15px !important;
-        }
-        /* Clear floats in navbar */
-        .navbar .container-fluid::after {
-            content: "" !important;
-            display: table !important;
-            clear: both !important;
-        }
       #stdinfo {
         padding-top: 20px;
         padding-left: 20px;
@@ -1577,11 +1427,11 @@ button.hello {
               <a style="color: #ffd800" class="nav-home">Trang nhất</a>
             </li>
             <li>
-              <a href="https://caokhao.page.gd/thi.php" style="color: #ffffff" class="nav-history">Lịch sử thi</a>
+              <a href="trangchu.html" style="color: #ffffff" class="nav-history">Lịch sử thi</a>
             </li>
 
             <li>
-              <a href="https://caokhao.page.gd/thi.php" style="color: #ffffff" id="stdportal_signout" class="nav-signout">Thoát</a>
+              <a href="trangchu.html" style="color: #ffffff" id="stdportal_signout" class="nav-signout">Thoát</a>
             </li>
           </ul>
         </div>
