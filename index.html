@@ -64,7 +64,7 @@
  </div>
  </div>
  <hr>
-  <button style="margin-bottom:5px; margin-left: auto; display: block;" class="btn btn-success" id="button_login" type="submit">
+  <button style="margin-bottom:5px; margin-left: auto; display: block;" class="btn btn-success" id="button_login" type="button" onclick="handleLogin()">
     Đăng nhập
 </button>
  </form>
@@ -108,6 +108,43 @@
             eyeIcon.style.opacity = '0.5';
         }
     });
+</script>
+<script>
+    // Danh sách dữ liệu sinh viên
+    const danhSachSinhVien = [
+        { mssv: "525YDK1104", hoTen: "Phạm Tiến Đạt" }
+    ];
+
+    function handleLogin() {
+        // Lấy dữ liệu từ ô nhập
+        const mssvInput = document.getElementById("userName").value.trim();
+        const errorElement = document.getElementById("loginfailed1"); 
+        
+        // Ẩn thông báo lỗi cũ đi (nếu có)
+        errorElement.style.display = "none";
+
+        if (mssvInput === "") {
+            errorElement.innerText = "Vui lòng nhập MSSV vào ô Tên đăng nhập!";
+            errorElement.style.display = "inline";
+            return;
+        }
+
+        // Tìm MSSV trong danh sách
+        const sinhVienTimThay = danhSachSinhVien.find(sv => sv.mssv === mssvInput);
+
+        if (sinhVienTimThay) {
+            // Lưu thông tin vào bộ nhớ trình duyệt
+            localStorage.setItem("currentMSSV", sinhVienTimThay.mssv);
+            localStorage.setItem("currentName", sinhVienTimThay.hoTen);
+            
+            // Chuyển hướng sang trang đích
+            window.location.href = "trangchu.html"; 
+        } else {
+            // Hiện lỗi nếu nhập sai
+            errorElement.innerText = "Không tìm thấy thông tin sinh viên với MSSV này!";
+            errorElement.style.display = "inline";
+        }
+    }
 </script>
 
 <style>@-moz-document url-prefix(){.note-modal .note-image-input{height:auto}}</style>
