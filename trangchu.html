@@ -21,6 +21,32 @@
         * {
             font-family:Roboto;
         }
+        /* === FIXES TO MATCH ORIGINAL DESIGN === */
+        /* Force navbar to always be expanded (horizontal) */
+        .navbar-collapse.collapse {
+            display: block !important;
+            height: auto !important;
+            padding-bottom: 0;
+            overflow: visible !important;
+        }
+        .navbar-toggle {
+            display: none !important;
+        }
+        .navbar-nav {
+            float: right !important;
+            margin: 0 !important;
+        }
+        .navbar-nav > li {
+            float: left !important;
+        }
+        .navbar-nav > li > a {
+            padding-top: 15px !important;
+            padding-bottom: 15px !important;
+        }
+        /* Fix navbar background color to match original */
+        .navbar.navbar-inverse {
+            min-height: 50px;
+        }
       #stdinfo {
         padding-top: 20px;
         padding-left: 20px;
@@ -1471,7 +1497,7 @@ button.hello {
                 </tr>
                 <tr>
                   <td id="fullnametd">Họ tên:</td>
-                  <td>&nbsp;<span id="ten-hien-thi" style="color: red; font-weight: bold;"></span></td>
+                  <td>&nbsp;<span id="ten-hien-thi" style="color: #333; font-weight: normal;"></span></td>
                 </tr>
                 <tr class="nodisplay">
                   <td id="dobtd">Ngày sinh:</td>
@@ -1488,7 +1514,7 @@ button.hello {
               </tbody>
             </table>
             <br>
-            <img class="std-photo-yesno" src="avatar.jpg"
+            <img class="std-photo-yesno" src="./trangchu_files/avatar.jpg">
             <div class="nodisplay">
               <br><input type="button" class="btn btn-xs cmd-edit-profile" value="Cập nhật" title="Cập nhật thông tin cá nhân của bạn">
             </div>
