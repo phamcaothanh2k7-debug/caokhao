@@ -1618,7 +1618,7 @@ button.hello {
               <tbody>
                 <tr>
                   <td id="usernametd">Mã số/TĐN:</td>
-                  <td>&nbsp;525YDK1107</td>
+                  <td>&nbsp;<span id="mssv-hien-thi">525YDK1107</span></td>
                 </tr>
                 <tr>
                   <td id="fullnametd">Họ tên:</td>
@@ -3116,15 +3116,19 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
     <script>
-    // Lấy tên từ bộ nhớ trình duyệt do trang đăng nhập (index.html) truyền sang
+    // Lấy tên và MSSV từ bộ nhớ trình duyệt do trang đăng nhập (index.html) truyền sang
     const savedName = localStorage.getItem("currentName");
+    const savedMSSV = localStorage.getItem("currentMSSV");
     
     if (savedName) {
-        // Gắn tên vào vị trí đã đục lỗ ở trên
         document.getElementById("ten-hien-thi").innerText = savedName;
-    } else {
-        // Nếu chưa đăng nhập mà nhảy thẳng vào đây thì đuổi về trang đăng nhập
-        console.log("No redirect");
+    }
+    if (savedMSSV) {
+        document.getElementById("mssv-hien-thi").innerText = savedMSSV;
+    }
+    if (!savedName && !savedMSSV) {
+        // Nếu không có trong bộ nhớ thì để thông tin mặc định (hoặc xử lý tuỳ ý)
+        console.log("No user info in localStorage, using defaults.");
     }
     </script>
   </body></html>
